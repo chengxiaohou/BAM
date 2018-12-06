@@ -1,0 +1,261 @@
+//
+//  PrefixHeader.pch
+//  QuanQiuBang
+//
+//  Created by 橙晓侯 on 16/1/5.
+//  Copyright © 2016年 小马网络. All rights reserved.
+//
+
+
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+
+#pragma mark - ......::::::: 第三方复用导入 :::::::......
+
+#import "MBProgressHUD.h"
+#import "AFNetworking.h"
+#import "UIView+ViewFrameGeometry.h"
+#import "MJExtension.h"
+#import "MJRefresh.h"
+#import "MLTransition.h"
+#import "UIView+SDAutoLayout.h"
+#import "NirKxMenu.h"
+#import "TZImagePickerController.h"
+#import "TZImageManager.h"
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+
+#pragma mark - ......::::::: 第三方非复用导入 :::::::......
+
+#import <SafariServices/SafariServices.h>
+#import <UMSocialCore/UMSocialCore.h>
+@import YMTreeMap;
+#import "IDNFeedParser.h"
+#import "TreeMapVC.h"
+#import "UIViewController+CWLateralSlide.h"
+
+#pragma mark - ......::::::: 我方复用导入 :::::::......
+
+#import "AppDelegate.h"
+#import "TheUser.h"
+#import "Worker.h"
+#import "UDManager.h"
+#import "DBManager.h"
+#import "BaseVC.h"
+#import "BaseTVCell.h"
+#import "BaseCVCell.h"
+#import "BaseObj.h"
+#import "NavView.h"
+#import "MBProgressHUD+Add.h"
+#import "UDManager.h"
+#import "SDCycleScrollView.h"
+#import "City.h"
+#import "NSString+MD5.h"
+#import "UIView+ViewFrameGeometry.h"
+#import "HMSegmentedControl.h"
+#import "LGPhoto.h"
+#import "WebVC.h"
+#import "EEView.h"
+#import "EELabel.h"
+#import "EETextField.h"
+#import "EETableView.h"
+#import "EEButton.h"
+#import "EEImageView.h"
+#import "EETextView.h"
+#import "EEScrollView.h"
+#import "EESwitch.h"
+#import "CXHStepperTF.h"
+#import "CXHTextFieldToolbar.h"
+#import "CDManager.h"
+#import "TheTab.h"
+#import "CropImageController.h"
+#import "GKCover.h"
+#import "NetworkManager.h"
+#import "TVCell.h"
+#import "CVCell.h"
+#import "UploadObj.h"
+#import "VDCameraAndPhotoTool.h"
+#import "LocationManager.h"
+#import "extobjc.h"
+#import "EEPickerView.h"
+#import "PickerModel.h"
+#import <SafariServices/SafariServices.h>
+#import "EECollectionView.h"
+#import "Masonry.h"
+#import "STPhotoBrowserController.h"
+#import "CXHViewPageVC.h"
+#import "CXHCategoryScrollView.h"
+#import "NSArray+MasonryEE.h"
+#import "SettingManager.h"
+
+#pragma mark - ......::::::: 我方非复用导入 :::::::......
+
+
+
+#pragma mark - ......::::::: 耦合性相关 :::::::......
+
+// 服务器地址
+//#define SYSURL          @"http://192.168.1.195:80/"
+#define SYSURL          @"http://xjm666666.vicp.io/"
+#define BaseURL         SYSURL@"juan.api/api/"
+#define ResponseCode    @"status"
+#define ResponseDatas   @"response"
+#define SuccessCode     @200
+#define Message         @"message"
+//#define ResponseCode    @"success"
+//#define SuccessCode     @1
+
+// 主题色
+#define ThemeColor          [UIColor colorWithRed:243/255.0 green:156/255.0 blue:17/255.0 alpha:1/1.0]
+// 背景灰色
+#define BGGreyColor         [UIColor colorWithRed:243/255.0 green:246/255.0 blue:249/255.0 alpha:1/1.0]
+// 灰字颜色
+#define GreyTextColor       HexColor(0xD1D1D1)
+// 占位颜色
+#define PlaceholderColor    HexColor(0xbd5567)
+// EEView变灰的颜色
+#define EEViewGreyColor     [UIColor colorWithRed:227/255.0 green:227/255.0 blue:227/255.0 alpha:1.0]
+
+
+#define SBName @"Main" // 故事板的名字
+#define SBLoginName @"LoginNav" // 故事版登录模块的名字
+#define PlaceHolderName @"占位图"
+#define IconHolderName  @"头像占位图"
+
+#define Nav_Fond        17 // 导航栏标题字体大小
+#define FirstPage       1  // 分页的第一页
+#define PasswordLength  6  // 密码必要长度
+#define AFN_TimeOut     10 // 网络请求超时时间
+#define MB_Delay     0.7 // 某些自定义MBProgressHUD的显示时长
+
+
+#define CXH @"1010032"
+#define XX  @"1010120"
+
+
+// 融云Appkey
+#define RC_APPKEY   @"mgb7ka1nmv1tg"
+/** 融云Appkey 生产环境 */
+#define RC_APPKEY_PRO   @"8w7jv4qb8dqhy"
+
+// 友盟相关
+#define UM_APPKEY           @"5a3885f8a40fa314c000027e"
+#define UM_WX_AppKey        @"wx00158d3ea95e64ab"
+#define UM_WX_AppSecret     @"d4624c36b6795d1d99dcf0547af5443d"
+#define UM_QQ_AppKey        @"1104622805"
+#define UM_QQ_AppSecret     @"ODzs0c5r7r9wTIin"
+#define UM_Sina_AppKey      @"1104622805"
+#define UM_Sina_AppSecret   @"ODzs0c5r7r9wTIin"
+
+// 高德
+#define AMapKey             @"8930ec66d02154047ad6205eaa260ec6"
+// 极光推送
+#define JPush_AppKey        @"9b8eeff2868d8492fea21896"
+
+// OSS相关
+#define OSS_EndPoint      @"https://oss-cn-shenzhen.aliyuncs.com/"
+#define OSS_AccessKey     @"LTAI1Qqo9AI8sU3c"
+#define OSS_SecretKey     @"6S3whP9XIceKWVZ1Ebt0NZcTzFaq8Q"
+#define OSS_BucketName    @"card-repository"
+#define OSS_FolderName    @"temp"
+#define OSS_ImageURL      @"http://card-repository.oss-cn-shenzhen.aliyuncs.com/"
+
+#pragma mark - ......::::::: 非复用宏 :::::::......
+
+
+#pragma mark - ......::::::: 复用宏 :::::::......
+
+#define RANDOM_COLOR [UIColor colorWithRed:(rand() % 255)/255.0 green:(rand() % 255)/255.0 blue:(rand() % 255)/255.0 alpha:1.0]
+
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_PAD (UI_USER_INTERFACE_IDIOM()== UIUserInterface
+
+#define USER_Cache @"缓存的用户模型"
+#define isTest 0
+
+// 定义这个常量，就可以不用在开发过程中使用"mas_"前缀。
+//#define MAS_SHORTHAND 但是写了就会和SD的布局代码冲突
+// 定义这个常量，就可以让Masonry帮我们自动把基础数据类型的数据，自动装箱为对象类型。
+#define MAS_SHORTHAND_GLOBALS
+
+#define SetImageViewImageWithURL_C(imageView, urlString, placeholder) \
+        [imageView sd_setImageWithURL:[NSURL URLWithString:urlString] placeholderImage:[UIImage imageNamed:placeholder]];
+
+#define SetImageViewImageWithURL_P(imageView, urlString) \
+        SetImageViewImageWithURL_C(imageView, urlString, PlaceHolderName)
+
+#define SetImageViewImageWithURL(imageView, urlString) \
+        [imageView sd_setImageWithURL:[NSURL URLWithString:urlString]];
+
+// 设置button图片
+//#define SetButtonImageWithURL_P(button, urlString)   [button sd_setImageWithURL:[NSURL URLWithString:urlString] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:IconHolderName]];
+
+#define SetButtonImageWithURL_C(button, urlString, placeholder) \
+        [button sd_setImageWithURL:[NSURL URLWithString:urlString] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:placeholder]];
+
+#define SetButtonImageWithURL_P(button, urlString) \
+        SetButtonImageWithURL_C(button, urlString, PlaceHolderName)
+
+#define RGBA(r,g,b,a)   [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
+#define HexColor(h)     [UIColor colorWithRed:(((h & 0xFF0000) >> 16))/255.0 green:(((h &0xFF00) >>8))/255.0 blue:((h &0xFF))/255.0 alpha:1.0]      //666
+
+#define Window          [[UIApplication sharedApplication].delegate window]
+#define Width           [UIScreen mainScreen].bounds.size.width
+#define Height          [UIScreen mainScreen].bounds.size.height
+#define DELE            (AppDelegate *)[[UIApplication sharedApplication] delegate]
+#define DB              [DBManager sharedManager]
+#define CD              [CDManager sharedManager]
+#define UD              [NSUserDefaults standardUserDefaults]
+#define LM              [LocationManager sharedManager]
+#define USER            [TheUser user]
+#define Mine            [TheUser user]
+#define ROW             indexPath.row
+#define SEC             indexPath.section
+#define NET             [NetworkManager sharedManager]
+#define TopVC           [Worker theTopVC]
+
+/** 分享的网址 */
+#define ShareURL            [NSString stringWithFormat:SYSURL@"card/html/share.html?uid=%@",Mine.ID]
+/** 分享的文字 */
+#define ShareMessage            @"我正在使用铭片APP"
+/** 分享的图片名 */
+#define ShareImageName            @"gymp_icon_logo"
+
+#define ErrorPhoneFormat        @"手机号格式不正确"
+#define ErrorPasswordAgain      @"两次输入的密码不一致"
+#define ErrorPasswordFormat     @"请输入6位以上密码"
+#define ErrorCodeFormat         @"请输入6位验证码"
+#define ErrorCodeCD             [MBProgressHUD showMessage:[NSString stringWithFormat:@"您的操作过于频繁，请于%ld秒后重试",(long)CD.SMS_CD] toView:Window];
+
+#pragma mark - ......::::::: 仅用于AFN :::::::......
+
+#define ErrorMessage    [Worker convertErrorMessage:[error localizedDescription]]
+
+#define IndexPath(section,row) [NSIndexPath indexPathForRow:row inSection:section]
+#define IndexSet(index)       [NSIndexSet indexSetWithIndex:index]
+
+
+
+
+//========================== 一大波通知... ==========================
+#define NOTI_DidLogout  @"退出登录"
+#define NOTI_DidLogin   @"用户登录"
+#define NOTI_HasText    @"StepCell.tf HasText"
+#define NOTI_RequestWarning @"请求的业务逻辑没走通"
+#define NOTI_RequestError @"请求出错"
+#define NOTI_ChangeStatusBarOrientation @"屏幕旋转通知"
+
+/** 短信验证码发送间隔变化 */
+#define NOTI_SMSCountDown @"SMS_CD--"
+#define FOURCE_MB @"FOURCE_MB"
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#endif /* PrefixHeader_pch */
